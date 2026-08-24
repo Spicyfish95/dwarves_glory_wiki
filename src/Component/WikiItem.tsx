@@ -20,20 +20,20 @@ function WikiItem(props: IProps) {
     const [biomes, setBiomes] = useState<BiomeIconType[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const { className, style, item }  = props;
-    
+
     useEffect(() => {
         if(!item) return
 
         setIsLoading(true);
 
-        setIconSrc(`${iconUrl}${item.sourceName}`);
-        setDetailSrc(`${detailUrl}${item.sourceName}`);
+        setIconSrc(`${import.meta.env.BASE_URL}${iconUrl}${item.sourceName}`);
+        setDetailSrc(`${import.meta.env.BASE_URL}${detailUrl}${item.sourceName}`);
 
         const biomeDatas = item.biomeType.map(type => {
             const data = BiomeIconData[type];
             return {
                 ...data,
-                url: `${biomelUrl}${data.sourceName}` // 直接拼接
+                url: `${import.meta.env.BASE_URL}${biomelUrl}${data.sourceName}`
             };
         });
 
