@@ -330,7 +330,7 @@ export const itemDatas: ItemDataType[] = [
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
-    professionType: [ProfessionType.Archer],
+    professionType: [ProfessionType.Rogue, ProfessionType.Archer],
   },
   {
     id: 35,
@@ -1015,7 +1015,7 @@ export const itemDatas: ItemDataType[] = [
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Agility],
-    professionType: [ProfessionType.Archer],
+    professionType: [ProfessionType.Rogue, ProfessionType.Archer],
   },
   {
     id: 110,
