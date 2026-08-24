@@ -9,38 +9,41 @@ interface IProps {
     item?: ItemDataType
 }
 
-const iconUrl = "../assets/images/icons/";
-const detailUrl = "../assets/images/details/";
-const biomelUrl = "../assets/images/biomes/";
+const iconUrl = "/images/icons/";
+const detailUrl = "/images/details/";
+const biomelUrl = "/images/biomes/";
 
 
 function WikiItem(props: IProps) {
-    const [iconSrc, setIconSrc] = useState(null);
-    const [detailSrc, setDetailSrc] = useState(null);
+    const [iconSrc, setIconSrc] = useState<string>();
+    const [detailSrc, setDetailSrc] = useState<string>();
     const [biomes, setBiomes] = useState<BiomeIconType[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const { className, style, item }  = props;
+    
     useEffect(() => {
-        const loadImage = async () => {
-            if(!item) return
-            setIsLoading(true);
-            const icon = await import(`${iconUrl}${item.sourceName}`);
-            setIconSrc(icon.default);
-            setIsLoading(false);
-            const detail = await import(`${detailUrl}${item.sourceName}`);
-            setDetailSrc(detail.default);
-            const biomeDatas: BiomeIconType[] = [];
-            for (let i = 0; i<item.biomeType.length; i++) {
-                const data = BiomeIconData[item.biomeType[i]];
-                const res = await import(`${biomelUrl}${data.sourceName}`);
-                biomeDatas.push({...data, url: res.default});
-            }
-            if(biomeDatas.length) {
-                setBiomes(biomeDatas);
-            }
-        };
-        loadImage();
-    }, []);
+        if(!item) return
+
+        setIsLoading(true);
+
+        setIconSrc(`${iconUrl}${item.sourceName}`);
+        setDetailSrc(`${detailUrl}${item.sourceName}`);
+
+        const biomeDatas = item.biomeType.map(type => {
+            const data = BiomeIconData[type];
+            return {
+                ...data,
+                url: `${biomelUrl}${data.sourceName}` // 直接拼接
+            };
+        });
+
+        if(biomeDatas.length) {
+            setBiomes(biomeDatas);
+        }
+
+        setIsLoading(false);
+    }, [item]);
+
     return (
         item ? 
             <Card className={className} style={style} >
