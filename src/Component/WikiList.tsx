@@ -1,7 +1,7 @@
 import { Empty, Flex } from "antd";
 import { useMemo, type CSSProperties } from "react";
 import WikiItem from "./WikiItem";
-import type { FilterType, ItemDataKeyType, ItemDataType } from "../assets/datas/Types";
+import type { FilterType, ItemDataType } from "../assets/datas/Types";
 import { itemDatas } from "../assets/datas/ItemDatas";
 
 interface IProps {

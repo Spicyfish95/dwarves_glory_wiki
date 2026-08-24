@@ -1,11 +1,10 @@
 import {  useState  } from "react";
 import "./WikiContent.css";
-import { Affix, Button, Flex, Form, Layout, Tag, Input } from 'antd';
+import { Affix, Button, Flex, Form, Tag, Input } from 'antd';
 import WikiList from "./WikiList";
 import { biomeTags, itemTypeTags, professionTags, statsTags } from "../assets/datas/TabDatas";
 import type { FilterType } from "../assets/datas/Types";
 
-const { Content } = Layout;
 
 let Timer: number | undefined = undefined;
 
@@ -14,7 +13,7 @@ function WikiContent() {
   const [filterData, setFilterData] = useState<FilterType | null>(null);
 
 
-    const onValuesChange = (changed: Partial<FilterType>, formData: FilterType) =>{
+    const onValuesChange = (_changed: Partial<FilterType>, formData: FilterType) =>{
         if(Timer){
             clearTimeout(Timer);
         }

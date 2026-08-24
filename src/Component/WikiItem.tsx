@@ -1,6 +1,5 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { Card, Empty, Popover, Image, Tooltip } from "antd";
-import { Meta } from "antd/es/list/Item";
 import type { BiomeIconType, ItemDataType } from "../assets/datas/Types";
 import { BiomeIconData } from "../assets/datas/ItemDatas";
 
