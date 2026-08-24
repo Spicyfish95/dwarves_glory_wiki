@@ -30,7 +30,6 @@ function WikiContent() {
     }
 
     return (
-        <Content>
             <Flex className='wiki_content' vertical>
                 <Affix offsetTop={0}>
                     <Flex vertical gap={10} className="wiki_content_header">
@@ -60,7 +59,6 @@ function WikiContent() {
                 </Affix>
                 <WikiList className="wiki_list" filterData={filterData} ></WikiList>
             </Flex>
-        </Content>
     )
 }
 

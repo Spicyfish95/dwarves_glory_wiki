@@ -30,6 +30,10 @@ export const itemTypeTags: TagItemType[] = [
   {
     label: "神器",
     value: ItemType.Artifact,
+  },
+  {
+    label: "药水",
+    value: ItemType.Potions,
   }
 ]
 
@@ -61,6 +65,18 @@ export const biomeTags: TagItemType[] = [
   {
     label: "酋长",
     value: BiomeType.Chief,
+  },
+  {
+    label: "制作",
+    value: BiomeType.Craft,
+  },
+  {
+    label: "突袭",
+    value: BiomeType.Raid,
+  },
+  {
+    label: "商店",
+    value: BiomeType.Store,
   }
 ]
 

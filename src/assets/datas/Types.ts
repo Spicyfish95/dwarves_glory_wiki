@@ -6,6 +6,8 @@ export const ItemType = {
   Quiver: 3,
   Shield: 4,
   Artifact: 5,
+  Potions: 6
+
 } as const;
 
 // 生物群系类型
@@ -16,7 +18,10 @@ export const BiomeType = {
   Mountain: 3,
   Ruin: 4,
   Glacier: 5,
-  Chief: 6
+  Chief: 6,
+  Craft: 7,
+  Raid: 8,
+  Store: 9
 } as const;
 
 // 角色属性类型
@@ -61,13 +66,19 @@ export interface ItemDataType {
   characterStat: CharacterStatType[];
   professionType: ProfessionType[];
 }
-
+// 数据筛选
 export interface FilterType {
   itemType: number,
   biomeType: number,
   characterStat: number,
   professionType: number,
   keyword?: string
+}
+// 地形图标
+export interface BiomeIconType {
+  name: string,
+  sourceName: string,
+  url?: string
 }
 
 // 导出定义的类型
