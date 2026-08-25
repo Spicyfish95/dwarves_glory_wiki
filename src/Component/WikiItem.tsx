@@ -1,17 +1,12 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { Card, Empty, Popover, Image, Tooltip } from "antd";
-import type { BiomeIconType, ItemDataType } from "../assets/datas/Types";
-import { BiomeIconData } from "../assets/datas/ItemDatas";
+import type { BiomeIconType, ItemModuleType } from "../assets/datas/Types";
 
 interface IProps {
     className?: string,
     style?: CSSProperties,
-    item?: ItemDataType
+    item?: ItemModuleType,
 }
-
-const iconUrl = "/images/icons/";
-const detailUrl = "/images/details/";
-const biomelUrl = "/images/biomes/";
 
 
 function WikiItem(props: IProps) {
@@ -23,42 +18,34 @@ function WikiItem(props: IProps) {
 
     useEffect(() => {
         if(!item) return
-
-        setIsLoading(true);
-
-        setIconSrc(`${import.meta.env.BASE_URL}${iconUrl}${item.sourceName}`);
-        setDetailSrc(`${import.meta.env.BASE_URL}${detailUrl}${item.sourceName}`);
-
-        const biomeDatas = item.biomeType.map(type => {
-            const data = BiomeIconData[type];
-            return {
-                ...data,
-                url: `${import.meta.env.BASE_URL}${biomelUrl}${data.sourceName}`
-            };
-        });
-
-        if(biomeDatas.length) {
-            setBiomes(biomeDatas);
+        async function loadImage(item: ItemModuleType){
+            setIsLoading(true);
+            const icons = await item.iconModule();
+            const details = await item.detailModule();
+            const biomes = await Promise.all(item.biomeModules.map(async biome => ({...biome, url: await biome.module()})));
+            setIconSrc(icons);
+            setIsLoading(false);
+            setDetailSrc(details)
+            setBiomes(biomes);
         }
-
-        setIsLoading(false);
-    }, [item]);
+        loadImage(item);
+    }, []);
 
     return (
         item ? 
             <Card className={className} style={style} >
                 <div className="wiki_item_container">
-                <Popover classNames={{root:"wiki_popover"}} mouseEnterDelay={0.3} destroyOnHidden content={detailSrc && !isLoading ? <Image style={{width: 400, height:"auto"}} src={detailSrc} alt={item.name}  /> : <Empty />}>
-                    <div className="wiki_item_cover">
-                        {
-                            !iconSrc || isLoading ? <Image placeholder={{ progress: { render: () => 'loading...' } }}  /> : <Image src={iconSrc} alt={item.name} preview={false} />
-                        }
-                    </div>
-                </Popover>
+                    <Popover classNames={{root:"wiki_popover"}} mouseEnterDelay={0.3} content={detailSrc && !isLoading ? <Image loading="lazy" style={{width: 400, height:"auto"}} src={detailSrc} alt={item.name}  /> : <Empty />}>
+                        <div className="wiki_item_cover">
+                            {
+                                !iconSrc || isLoading ? <Image loading="lazy" placeholder={{ progress: { render: () => 'loading...' } }}  /> : <img loading="lazy" src={iconSrc} alt={item.name}  />
+                            }
+                        </div>
+                    </Popover>
                     <div className="wiki_item_name">{item.name}</div>
                     <div className="wiki_item_biome">
                         {
-                            biomes.map(biome => <Tooltip  key={biome.sourceName} placement="bottom" title={biome.name}><img src={biome.url} /></Tooltip>)
+                            biomes.map(biome => <Tooltip  key={biome.sourceName} placement="bottom" title={biome.name}><img loading="lazy" src={biome.url} /></Tooltip>)
                         }
                     </div>
                 </div>

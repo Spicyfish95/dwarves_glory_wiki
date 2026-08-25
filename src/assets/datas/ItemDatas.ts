@@ -1,4 +1,4 @@
-import { BiomeType, CharacterStatType, ItemType, ProfessionType, type BiomeIconType, type ItemDataType } from "./Types";
+import { BiomeType, CharacterStatType, ItemType, ProfessionType, type BiomeIconType, type ItemDataType, type ItemModuleType } from "./Types";
 
 export const BiomeIconData: Record<BiomeType, BiomeIconType> = {
   [BiomeType.Any]: { name: "任意", sourceName: "any.png"},
@@ -13,7 +13,7 @@ export const BiomeIconData: Record<BiomeType, BiomeIconType> = {
   [BiomeType.Store]: { name: "商店", sourceName: "store.png"}
 }
 
-export const itemDatas: ItemDataType[] = [
+const items: ItemDataType[] = [
   // ===== 任意 (any) =====
   {
     id: 0,
@@ -1252,3 +1252,22 @@ export const itemDatas: ItemDataType[] = [
     professionType: [ProfessionType.Mage,ProfessionType.Knight],
   },
 ];
+
+const modules = import.meta.glob('../images/*/*.{png,jpg,jpeg,svg}', { as: 'url' });
+
+async function getImageUrl(name: string, fileName: "icons" | "details" | "biomes") {
+  const preUrl = `../images/${fileName}/${name}`;
+  if(modules[preUrl]) {
+    return await modules[preUrl]();
+  }
+  return undefined;
+}
+
+const itemDatas: ItemModuleType[] = items.map(item => ({
+  ...item,
+  iconModule:  async () => await getImageUrl(item.sourceName, "icons"),
+  detailModule:  async () => await getImageUrl(item.sourceName, "details"),
+  biomeModules: item.biomeType.map(val => ({ ...BiomeIconData[val], module:  async () => await getImageUrl(BiomeIconData[val].sourceName, "biomes") }))
+}));
+
+export { itemDatas };

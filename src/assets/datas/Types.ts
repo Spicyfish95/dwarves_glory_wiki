@@ -66,6 +66,17 @@ export interface ItemDataType {
   characterStat: CharacterStatType[];
   professionType: ProfessionType[];
 }
+
+export interface ItemModuleType extends ItemDataType {
+  iconModule: () => Promise<string | undefined>;
+  detailModule: () => Promise<string | undefined>;
+  biomeModules: {
+      module: () => Promise<string | undefined>;
+      name: string;
+      sourceName: string;
+  }[];
+}
+
 // 数据筛选
 export interface FilterType {
   itemType: number,

@@ -1,7 +1,7 @@
 import { Empty, Flex } from "antd";
 import { useMemo, type CSSProperties } from "react";
 import WikiItem from "./WikiItem";
-import type { FilterType, ItemDataType } from "../assets/datas/Types";
+import type { FilterType, ItemModuleType } from "../assets/datas/Types";
 import { itemDatas } from "../assets/datas/ItemDatas";
 
 interface IProps {
@@ -10,7 +10,7 @@ interface IProps {
     filterData: FilterType | null
 }
 
-function filterList(filterData: FilterType | null){
+function filterList(filterData: FilterType | null): ItemModuleType[]{
     // debugger
     if(filterData === null) return itemDatas;
     // 搜索物品
@@ -20,9 +20,9 @@ function filterList(filterData: FilterType | null){
     // 标签筛选
     const exactKeys = Object.keys(filterData).filter(key => key !=="keyword" && filterData[key as keyof FilterType] != undefined);
     if(!exactKeys.length) return itemDatas;
-    return itemDatas.filter((item: ItemDataType) => {
+    return itemDatas.filter((item: ItemModuleType) => {
         return exactKeys.every((key) => {
-            const curData = item[(key as keyof ItemDataType)];
+            const curData = item[(key as keyof ItemModuleType)];
             const tagData = filterData[(key as keyof FilterType)];
             if(!Array.isArray(curData)) return false;
             return curData.includes(tagData as any);
@@ -33,14 +33,14 @@ function filterList(filterData: FilterType | null){
 
 function WikiList(props: IProps) {
     const { className, style, filterData }  = props;
-
-    const list = useMemo<ItemDataType[]>(() => filterList(filterData), [filterData])
+    const list = useMemo<ItemModuleType[]>(() => filterList(filterData), [filterData])
 
     return (
         <Flex className={className} style={style} wrap>
             {
-                list?.length ? list.map(item => <WikiItem key={item.id} className="wiki_item" item={item} />) : <Empty/>
+                list.map(item => <WikiItem key={item.id} className="wiki_item" item={item} />)
             }
+            {!list?.length && <Empty/>}
         </Flex>
     )
 }
