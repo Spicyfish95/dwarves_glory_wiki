@@ -24,6 +24,12 @@ html,body{
       background: #2e323d;
     }
   }
+  .wiki_detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+  }
 }
 .wiki_layout{
     margin: 0 auto;
