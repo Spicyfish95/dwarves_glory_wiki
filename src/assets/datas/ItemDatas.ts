@@ -1271,7 +1271,8 @@ const modules = import.meta.glob('../images/*/*.{png,jpg,jpeg,svg}', { as: 'url'
 async function getImageUrl(name: string, fileName: "icons" | "details" | "biomes") {
   const preUrl = `../images/${fileName}/${name}`;
   if(modules[preUrl]) {
-    return await modules[preUrl]();
+    const url = await modules[preUrl]();
+    return typeof url === "string" ? url : (url as any).default;
   }
   return undefined;
 }
