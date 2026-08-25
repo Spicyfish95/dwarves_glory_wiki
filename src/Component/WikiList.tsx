@@ -1,12 +1,11 @@
+import "./WikiList.css"
 import { Empty, Flex } from "antd";
-import { useMemo, type CSSProperties } from "react";
+import { useMemo } from "react";
 import WikiItem from "./WikiItem";
 import type { FilterType, ItemModuleType } from "../assets/datas/Types";
 import { itemDatas } from "../assets/datas/ItemDatas";
 
 interface IProps {
-    className?: string,
-    style?: CSSProperties,
     filterData: FilterType | null
 }
 
@@ -32,13 +31,13 @@ function filterList(filterData: FilterType | null): ItemModuleType[]{
 
 
 function WikiList(props: IProps) {
-    const { className, style, filterData }  = props;
+    const { filterData }  = props;
     const list = useMemo<ItemModuleType[]>(() => filterList(filterData), [filterData])
 
     return (
-        <Flex className={className} style={style} wrap>
+        <Flex className="wiki_list" wrap>
             {
-                list.map(item => <WikiItem key={item.id} className="wiki_item" item={item} />)
+                list.map(item => <WikiItem key={item.id} item={item} />)
             }
             {!list?.length && <Empty/>}
         </Flex>

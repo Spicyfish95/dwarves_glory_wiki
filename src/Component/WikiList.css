@@ -1,0 +1,19 @@
+
+/* 物品列表 */
+.wiki_list{
+    flex-grow: 1;
+    background: #fff;
+    gap: 16px;
+    width: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
+    .ant-empty{
+        flex-grow: 1;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

@@ -65,6 +65,7 @@ export interface ItemDataType {
   biomeType: BiomeType[];
   characterStat: CharacterStatType[];
   professionType: ProfessionType[];
+  craftSource?: number[]
 }
 
 export interface ItemModuleType extends ItemDataType {

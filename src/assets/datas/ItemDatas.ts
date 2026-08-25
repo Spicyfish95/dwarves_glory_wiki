@@ -405,6 +405,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Chief, BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
     professionType: [ProfessionType.Mage],
+    craftSource: [39, 82,114]
   },
   {
     id: 43,
@@ -1115,6 +1116,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
     professionType: [ProfessionType.Rogue],
+    craftSource: [44,50,77]
   },
   {
     id: 121,
@@ -1124,6 +1126,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
     professionType: [ProfessionType.Rogue, ProfessionType.Archer],
+    craftSource: [24,71,78]
   },
   {
     id: 122,
@@ -1133,6 +1136,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
     professionType: [ProfessionType.Rogue, ProfessionType.Archer],
+    craftSource: [25, 70, 79]
   },
   {
     id: 123,
@@ -1142,6 +1146,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
     professionType: [ProfessionType.Warrior],
+    craftSource: [4,8,12]
   },
   {
     id: 124,
@@ -1151,6 +1156,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
     professionType: [ProfessionType.Warrior],
+    craftSource: [1,5,13]
   },
   {
     id: 125,
@@ -1160,6 +1166,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
     professionType: [ProfessionType.Rogue],
+    craftSource: [38,50,77]
   },
   {
     id: 126,
@@ -1178,6 +1185,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
     professionType: [ProfessionType.Warrior],
+    craftSource: [33,35,53]
   },
   {
     id: 128,
@@ -1187,6 +1195,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
     professionType: [ProfessionType.Mage],
+    craftSource: [42,74,115]
   },
   {
     id: 129,
@@ -1196,6 +1205,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
     professionType: [ProfessionType.Mage],
+    craftSource: [42,75,116]
   },
   {
     id: 130,
@@ -1214,6 +1224,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
     professionType: [ProfessionType.Rogue],
+    craftSource: [45,48,114]
   },
   {
     id: 132,
@@ -1223,6 +1234,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
     professionType: [ProfessionType.Rogue],
+    craftSource: [45,72,114]
   },
   {
     id: 133,
@@ -1232,6 +1244,7 @@ const items: ItemDataType[] = [
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
     professionType: [ProfessionType.Warrior],
+    craftSource: [19,131,132]
   },
   {
     id: 134,
@@ -1263,11 +1276,18 @@ async function getImageUrl(name: string, fileName: "icons" | "details" | "biomes
   return undefined;
 }
 
-const itemDatas: ItemModuleType[] = items.map(item => ({
-  ...item,
-  iconModule:  async () => await getImageUrl(item.sourceName, "icons"),
-  detailModule:  async () => await getImageUrl(item.sourceName, "details"),
-  biomeModules: item.biomeType.map(val => ({ ...BiomeIconData[val], module:  async () => await getImageUrl(BiomeIconData[val].sourceName, "biomes") }))
-}));
+const itemDataMap: Record<number, ItemModuleType> = {};
 
-export { itemDatas };
+const itemDatas: ItemModuleType[] = items.map(item => {
+  const data = {
+    ...item,
+    iconModule:  async () => await getImageUrl(item.sourceName, "icons"),
+    detailModule:  async () => await getImageUrl(item.sourceName, "details"),
+    biomeModules: item.biomeType.map(val => ({ ...BiomeIconData[val], module:  async () => await getImageUrl(BiomeIconData[val].sourceName, "biomes") }))
+  }
+  itemDataMap[data.id] = data;
+  return data;
+});
+
+
+export { itemDatas, itemDataMap };

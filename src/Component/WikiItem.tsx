@@ -1,11 +1,12 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import './WikiItem.css'
+import { useEffect, useMemo, useState } from "react";
 import { Card, Empty, Popover, Image, Tooltip, Spin } from "antd";
-import type { BiomeIconType, ItemModuleType } from "../assets/datas/Types";
+import { BiomeType, type BiomeIconType, type ItemModuleType } from "../assets/datas/Types";
 import errorImag from "../assets/images/error.png"
+import { itemDataMap } from '../assets/datas/ItemDatas';
+import WikiCraftItem from './wikiCraftItem';
 
 interface IProps {
-    className?: string,
-    style?: CSSProperties,
     item?: ItemModuleType,
 }
 
@@ -17,7 +18,17 @@ function WikiItem(props: IProps) {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [isError, setIsError] = useState<boolean>(false);
     const [isDetailLoading, setIsDetailLoading] = useState<boolean>(true);
-    const { className, style, item }  = props;
+    const { item }  = props;
+
+    const isCraftItem = useMemo(() => {
+        if(!item) return false;
+        return item.biomeType.includes(BiomeType.Craft);
+    }, [item]);
+
+    const craftSources = useMemo<ItemModuleType[]>(() => {
+        if(!isCraftItem || !item?.craftSource?.length) return [];
+        return item.craftSource.map(id => itemDataMap[id]);
+    }, [isCraftItem, item?.craftSource])
 
     useEffect(() => {
         if(!item) return
@@ -34,7 +45,7 @@ function WikiItem(props: IProps) {
 
     return (
         item ? 
-            <Card className={className} style={style} >
+            <Card className="wiki_item">
                 <div className="wiki_item_container">
                     <Popover classNames={{root:"wiki_popover"}} placement="bottomLeft" destroyOnHidden mouseEnterDelay={0.3} onOpenChange={() => setIsDetailLoading(true)} content={
                             <div className="wiki_detail">
@@ -56,6 +67,14 @@ function WikiItem(props: IProps) {
                             biomes.map(biome => <Tooltip  key={biome.sourceName} placement="bottom" title={biome.name}><img loading="lazy" src={biome.url} /></Tooltip>)
                         }
                     </div>
+                    {
+                        isCraftItem && 
+                        <div className='wiki_craft_list'>
+                            { 
+                                craftSources.map(sourceItem => <WikiCraftItem key={sourceItem.id} item={sourceItem} />)
+                            }
+                        </div>
+                    }
                 </div>
             </Card>
             : <Empty />

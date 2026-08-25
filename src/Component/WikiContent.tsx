@@ -56,7 +56,7 @@ function WikiContent() {
                         </Form>
                     </Flex>
                 </Affix>
-                <WikiList className="wiki_list" filterData={filterData} ></WikiList>
+                <WikiList filterData={filterData} ></WikiList>
             </Flex>
     )
 }
