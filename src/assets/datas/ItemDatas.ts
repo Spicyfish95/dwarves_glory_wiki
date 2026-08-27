@@ -1,16 +1,16 @@
 import { BiomeType, CharacterStatType, ItemType, ProfessionType, type BiomeIconType, type ItemDataType, type ItemModuleType } from "./Types";
 
 export const BiomeIconData: Record<BiomeType, BiomeIconType> = {
-  [BiomeType.Any]: { name: "任意", sourceName: "any.png"},
-  [BiomeType.Forest]: { name: "森林", sourceName: "forest.png"},
-  [BiomeType.Cave]: { name: "洞穴", sourceName: "cave.png"},
-  [BiomeType.Mountain]: { name: "山岳", sourceName: "mountain.png"},
-  [BiomeType.Ruin]: { name: "废墟", sourceName: "ruin.png"},
-  [BiomeType.Glacier]: { name: "冰川", sourceName: "glacier.png"},
-  [BiomeType.Chief]: { name: "酋长", sourceName: "chief.png"},
-  [BiomeType.Craft]: { name: "制作", sourceName: "craft.png"},
-  [BiomeType.Raid]: { name: "突袭", sourceName: "raid.png"},
-  [BiomeType.Store]: { name: "商店", sourceName: "store.png"}
+  [BiomeType.Any]: { name: "任意", sourceName: "any.webp"},
+  [BiomeType.Forest]: { name: "森林", sourceName: "forest.webp"},
+  [BiomeType.Cave]: { name: "洞穴", sourceName: "cave.webp"},
+  [BiomeType.Mountain]: { name: "山岳", sourceName: "mountain.webp"},
+  [BiomeType.Ruin]: { name: "废墟", sourceName: "ruin.webp"},
+  [BiomeType.Glacier]: { name: "冰川", sourceName: "glacier.webp"},
+  [BiomeType.Chief]: { name: "酋长", sourceName: "chief.webp"},
+  [BiomeType.Craft]: { name: "制作", sourceName: "craft.webp"},
+  [BiomeType.Raid]: { name: "突袭", sourceName: "raid.webp"},
+  [BiomeType.Store]: { name: "商店", sourceName: "store.webp"}
 }
 
 const items: ItemDataType[] = [
@@ -18,7 +18,7 @@ const items: ItemDataType[] = [
   {
     id: 0,
     name: "刺客之刃",
-    sourceName: "assassin_blade.png",
+    sourceName: "assassin_blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Agility],
@@ -27,7 +27,7 @@ const items: ItemDataType[] = [
   {
     id: 1,
     name: "血钢肩甲",
-    sourceName: "blood_steel_shoulder_armor.png",
+    sourceName: "blood_steel_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina, CharacterStatType.Strength],
@@ -36,7 +36,7 @@ const items: ItemDataType[] = [
   {
     id: 2,
     name: "洞察之书",
-    sourceName: "book_of_insight.png",
+    sourceName: "book_of_insight.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Intelligence],
@@ -45,7 +45,7 @@ const items: ItemDataType[] = [
   {
     id: 3,
     name: "布披肩",
-    sourceName: "cloth_cape.png",
+    sourceName: "cloth_cape.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Intelligence],
@@ -54,7 +54,7 @@ const items: ItemDataType[] = [
   {
     id: 4,
     name: "铜制头盔",
-    sourceName: "copper_helmet.png",
+    sourceName: "copper_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Agility],
@@ -63,7 +63,7 @@ const items: ItemDataType[] = [
   {
     id: 5,
     name: "铜肩甲",
-    sourceName: "copper_shoulder_armor.png",
+    sourceName: "copper_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Agility],
@@ -72,7 +72,7 @@ const items: ItemDataType[] = [
   {
     id: 6,
     name: "龙肉培根",
-    sourceName: "dragon_meat_bacon.png",
+    sourceName: "dragon_meat_bacon.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina],
@@ -81,7 +81,7 @@ const items: ItemDataType[] = [
   {
     id: 7,
     name: "无尽酒杯",
-    sourceName: "endless_goblet.png",
+    sourceName: "endless_goblet.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Knowledge],
@@ -90,7 +90,7 @@ const items: ItemDataType[] = [
   {
     id: 8,
     name: "精钢头盔",
-    sourceName: "fine_steel_helmet.png",
+    sourceName: "fine_steel_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina,CharacterStatType.Strength],
@@ -99,7 +99,7 @@ const items: ItemDataType[] = [
   {
     id: 9,
     name: "狂怒之锤",
-    sourceName: "fury_hammer.png",
+    sourceName: "fury_hammer.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina],
@@ -108,7 +108,7 @@ const items: ItemDataType[] = [
   {
     id: 10,
     name: "黄金盾",
-    sourceName: "golden_shield.png",
+    sourceName: "golden_shield.webp",
     itemType: [ItemType.Shield],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina],
@@ -117,7 +117,7 @@ const items: ItemDataType[] = [
   {
     id: 11,
     name: "金矿石",
-    sourceName: "gold_ore.png",
+    sourceName: "gold_ore.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Intelligence],
@@ -126,7 +126,7 @@ const items: ItemDataType[] = [
   {
     id: 12,
     name: "骑士头盔",
-    sourceName: "knight_helmet.png",
+    sourceName: "knight_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina],
@@ -135,7 +135,7 @@ const items: ItemDataType[] = [
   {
     id: 13,
     name: "骑士肩甲",
-    sourceName: "knight_shoulder_armor.png",
+    sourceName: "knight_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina],
@@ -144,7 +144,7 @@ const items: ItemDataType[] = [
   {
     id: 14,
     name: "生命之符",
-    sourceName: "life_rune.png",
+    sourceName: "life_rune.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Knowledge],
@@ -153,7 +153,7 @@ const items: ItemDataType[] = [
   {
     id: 15,
     name: "毒药瓶",
-    sourceName: "poison_vial.png",
+    sourceName: "poison_vial.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Agility],
@@ -162,7 +162,7 @@ const items: ItemDataType[] = [
   {
     id: 16,
     name: "恢复戒指",
-    sourceName: "recovery_ring.png",
+    sourceName: "recovery_ring.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Stamina],
@@ -171,16 +171,16 @@ const items: ItemDataType[] = [
   {
     id: 17,
     name: "圣洁法杖",
-    sourceName: "sanctified_staff.png",
+    sourceName: "sanctified_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Knowledge],
-    professionType: [ProfessionType.Shaman, ProfessionType.Priest],
+    professionType: [ProfessionType.Priest],
   },
   {
     id: 18,
     name: "钨矿石",
-    sourceName: "tungsten_ore.png",
+    sourceName: "tungsten_ore.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Strength],
@@ -189,7 +189,7 @@ const items: ItemDataType[] = [
   {
     id: 19,
     name: "战刀",
-    sourceName: "war_blade.png",
+    sourceName: "war_blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Strength],
@@ -198,7 +198,7 @@ const items: ItemDataType[] = [
   {
     id: 20,
     name: "巫师帽",
-    sourceName: "wizard_hat.png",
+    sourceName: "wizard_hat.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Intelligence],
@@ -207,7 +207,7 @@ const items: ItemDataType[] = [
   {
     id: 21,
     name: "巫师法杖",
-    sourceName: "wizard_staff.png",
+    sourceName: "wizard_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Any],
     characterStat: [CharacterStatType.Intelligence],
@@ -218,7 +218,7 @@ const items: ItemDataType[] = [
   {
     id: 22,
     name: "护身符",
-    sourceName: "amulet.png",
+    sourceName: "amulet.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Intelligence],
@@ -227,7 +227,7 @@ const items: ItemDataType[] = [
   {
     id: 23,
     name: "刺客匕首",
-    sourceName: "assassin_dagger.png",
+    sourceName: "assassin_dagger.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -236,7 +236,7 @@ const items: ItemDataType[] = [
   {
     id: 24,
     name: "刺客兜帽",
-    sourceName: "assassin_hood.png",
+    sourceName: "assassin_hood.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -245,7 +245,7 @@ const items: ItemDataType[] = [
   {
     id: 25,
     name: "刺客肩甲",
-    sourceName: "assassin_shoulder_armor.png",
+    sourceName: "assassin_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -254,7 +254,7 @@ const items: ItemDataType[] = [
   {
     id: 26,
     name: "炽焰利刃",
-    sourceName: "blazing_blade.png",
+    sourceName: "blazing_blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -263,7 +263,7 @@ const items: ItemDataType[] = [
   {
     id: 27,
     name: "黑暗水晶",
-    sourceName: "dark_crystal.png",
+    sourceName: "dark_crystal.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Stamina],
@@ -272,7 +272,7 @@ const items: ItemDataType[] = [
   {
     id: 28,
     name: "爆炸箭袋",
-    sourceName: "explosive_arrow_quiver.png",
+    sourceName: "explosive_arrow_quiver.webp",
     itemType: [ItemType.Quiver],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -281,7 +281,7 @@ const items: ItemDataType[] = [
   {
     id: 29,
     name: "凛风碎石锤",
-    sourceName: "frigid_hammer.png",
+    sourceName: "frigid_hammer.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Strength],
@@ -290,7 +290,7 @@ const items: ItemDataType[] = [
   {
     id: 30,
     name: "狂怒之弓",
-    sourceName: "fury_bow.png",
+    sourceName: "fury_bow.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -299,7 +299,7 @@ const items: ItemDataType[] = [
   {
     id: 31,
     name: "狂怒肩甲",
-    sourceName: "fury_shoulder_armor.png",
+    sourceName: "fury_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Knowledge],
@@ -308,7 +308,7 @@ const items: ItemDataType[] = [
   {
     id: 32,
     name: "熔痕匕首",
-    sourceName: "molten_dagger.png",
+    sourceName: "molten_dagger.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -317,7 +317,7 @@ const items: ItemDataType[] = [
   {
     id: 33,
     name: "猪肘",
-    sourceName: "pork_knuckle.png",
+    sourceName: "pork_knuckle.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Strength],
@@ -326,16 +326,16 @@ const items: ItemDataType[] = [
   {
     id: 34,
     name: "日曜头盔",
-    sourceName: "solar_helmet.png",
+    sourceName: "solar_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
-    professionType: [ProfessionType.Rogue, ProfessionType.Archer],
+    professionType: [ProfessionType.Archer],
   },
   {
     id: 35,
     name: "疾行豆",
-    sourceName: "swift_bean.png",
+    sourceName: "swift_bean.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -344,7 +344,7 @@ const items: ItemDataType[] = [
   {
     id: 36,
     name: "迅捷手套",
-    sourceName: "swift_gloves.png",
+    sourceName: "swift_gloves.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -353,7 +353,7 @@ const items: ItemDataType[] = [
   {
     id: 37,
     name: "枯萎箭袋",
-    sourceName: "withered_arrow_quiver.png",
+    sourceName: "withered_arrow_quiver.webp",
     itemType: [ItemType.Quiver],
     biomeType: [BiomeType.Cave],
     characterStat: [CharacterStatType.Agility],
@@ -364,7 +364,7 @@ const items: ItemDataType[] = [
   {
     id: 38,
     name: "春分",
-    sourceName: "equinox_sword_offhand.png",
+    sourceName: "equinox_sword_offhand.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Agility],
@@ -373,7 +373,7 @@ const items: ItemDataType[] = [
   {
     id: 39,
     name: "火之杖",
-    sourceName: "fire_staff.png",
+    sourceName: "fire_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Intelligence],
@@ -382,7 +382,7 @@ const items: ItemDataType[] = [
   {
     id: 40,
     name: "堡垒",
-    sourceName: "fortress_shield.png",
+    sourceName: "fortress_shield.webp",
     itemType: [ItemType.Shield],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Stamina],
@@ -391,7 +391,7 @@ const items: ItemDataType[] = [
   {
     id: 41,
     name: "月神弓",
-    sourceName: "lunar_bow.png",
+    sourceName: "lunar_bow.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief, BiomeType.Ruin],
     characterStat: [CharacterStatType.Agility],
@@ -400,7 +400,7 @@ const items: ItemDataType[] = [
   {
     id: 42,
     name: "蛇杖",
-    sourceName: "serpent_staff.png",
+    sourceName: "serpent_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief, BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
@@ -410,7 +410,7 @@ const items: ItemDataType[] = [
   {
     id: 43,
     name: "日曜弓",
-    sourceName: "solar_bow.png",
+    sourceName: "solar_bow.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Agility],
@@ -419,7 +419,7 @@ const items: ItemDataType[] = [
   {
     id: 44,
     name: "至点",
-    sourceName: "solstice_sword_main.png",
+    sourceName: "solstice_sword_main.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Agility],
@@ -428,7 +428,7 @@ const items: ItemDataType[] = [
   {
     id: 45,
     name: "雷之杖",
-    sourceName: "thunder_staff.png",
+    sourceName: "thunder_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Intelligence],
@@ -437,7 +437,7 @@ const items: ItemDataType[] = [
   {
     id: 46,
     name: "虚空长剑",
-    sourceName: "void_greatsword.png",
+    sourceName: "void_greatsword.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Strength],
@@ -446,7 +446,7 @@ const items: ItemDataType[] = [
   {
     id: 47,
     name: "水之杖",
-    sourceName: "water_staff.png",
+    sourceName: "water_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Knowledge],
@@ -455,7 +455,7 @@ const items: ItemDataType[] = [
   {
     id: 48,
     name: "白色死神",
-    sourceName: "white_reaper.png",
+    sourceName: "white_reaper.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Agility],
@@ -464,7 +464,7 @@ const items: ItemDataType[] = [
   // {
   //   id: 49,
   //   name: "白色死神",
-  //   sourceName: "white_reaper_offhand.png",
+  //   sourceName: "white_reaper_offhand.webp",
   //   itemType: [ItemType.Weapon],
   //   biomeType: [BiomeType.Chief],
   //   characterStat: [CharacterStatType.Agility],
@@ -473,7 +473,7 @@ const items: ItemDataType[] = [
   {
     id: 50,
     name: "寒冬",
-    sourceName: "winter_staff.png",
+    sourceName: "winter_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Intelligence],
@@ -482,7 +482,7 @@ const items: ItemDataType[] = [
   {
     id: 51,
     name: "世界破坏者",
-    sourceName: "world_breaker.png",
+    sourceName: "world_breaker.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief],
     characterStat: [CharacterStatType.Strength],
@@ -493,7 +493,7 @@ const items: ItemDataType[] = [
   {
     id: 52,
     name: "战斧",
-    sourceName: "battle_axe.png",
+    sourceName: "battle_axe.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Strength],
@@ -502,7 +502,7 @@ const items: ItemDataType[] = [
   {
     id: 53,
     name: "蓝莓",
-    sourceName: "blueberry.png",
+    sourceName: "blueberry.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Intelligence],
@@ -511,7 +511,7 @@ const items: ItemDataType[] = [
   {
     id: 54,
     name: "速度之靴",
-    sourceName: "boots_of_speed.png",
+    sourceName: "boots_of_speed.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Agility],
@@ -520,16 +520,16 @@ const items: ItemDataType[] = [
   {
     id: 55,
     name: "百夫长旗帜",
-    sourceName: "centurion_banner.png",
+    sourceName: "centurion_banner.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Forest],
-    characterStat: [CharacterStatType.Knowledge],
+    characterStat: [CharacterStatType.Strength],
     professionType: [ProfessionType.Shaman],
   },
   {
     id: 56,
     name: "百夫长披风",
-    sourceName: "centurion_cape.png",
+    sourceName: "centurion_cape.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Knowledge],
@@ -538,7 +538,7 @@ const items: ItemDataType[] = [
   {
     id: 57,
     name: "百夫长头盔",
-    sourceName: "centurion_helmet.png",
+    sourceName: "centurion_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Knowledge],
@@ -547,7 +547,7 @@ const items: ItemDataType[] = [
   {
     id: 58,
     name: "德鲁伊兜帽",
-    sourceName: "druid_hood.png",
+    sourceName: "druid_hood.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Knowledge],
@@ -556,7 +556,7 @@ const items: ItemDataType[] = [
   {
     id: 59,
     name: "德鲁伊肩垫",
-    sourceName: "druid_shoulder_pads.png",
+    sourceName: "druid_shoulder_pads.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Knowledge],
@@ -565,7 +565,7 @@ const items: ItemDataType[] = [
   {
     id: 60,
     name: "矮人斗篷",
-    sourceName: "dwarf_cloak.png",
+    sourceName: "dwarf_cloak.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Strength],
@@ -574,7 +574,7 @@ const items: ItemDataType[] = [
   {
     id: 61,
     name: "矮人头盔",
-    sourceName: "dwarf_helmet.png",
+    sourceName: "dwarf_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Strength],
@@ -583,7 +583,7 @@ const items: ItemDataType[] = [
   {
     id: 62,
     name: "矮人双斧",
-    sourceName: "dwarf_twin_axe.png",
+    sourceName: "dwarf_twin_axe.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Strength],
@@ -592,7 +592,7 @@ const items: ItemDataType[] = [
   {
     id: 63,
     name: "热煤块",
-    sourceName: "hot_coal.png",
+    sourceName: "hot_coal.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Intelligence],
@@ -601,7 +601,7 @@ const items: ItemDataType[] = [
   {
     id: 64,
     name: "鸮鹦鹉蛋",
-    sourceName: "kakapo_egg.png",
+    sourceName: "kakapo_egg.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Stamina],
@@ -610,7 +610,7 @@ const items: ItemDataType[] = [
   {
     id: 65,
     name: "鸮鹦鹉之灵",
-    sourceName: "kakapo_spirit.png",
+    sourceName: "kakapo_spirit.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Knowledge],
@@ -619,7 +619,7 @@ const items: ItemDataType[] = [
   {
     id: 66,
     name: "橡木棒",
-    sourceName: "oak_staff.png",
+    sourceName: "oak_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Knowledge],
@@ -628,7 +628,7 @@ const items: ItemDataType[] = [
   {
     id: 67,
     name: "剃刀戒指",
-    sourceName: "razor_ring.png",
+    sourceName: "razor_ring.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Agility],
@@ -637,7 +637,7 @@ const items: ItemDataType[] = [
   {
     id: 68,
     name: "泰坦面甲",
-    sourceName: "titan_face_guard.png",
+    sourceName: "titan_face_guard.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Strength],
@@ -646,7 +646,7 @@ const items: ItemDataType[] = [
   {
     id: 69,
     name: "泰坦肩甲",
-    sourceName: "titan_shoulder_armor.png",
+    sourceName: "titan_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Strength],
@@ -655,7 +655,7 @@ const items: ItemDataType[] = [
   {
     id: 70,
     name: "白色掠夺者斗篷",
-    sourceName: "white_raider_cloak.png",
+    sourceName: "white_raider_cloak.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Agility],
@@ -664,7 +664,7 @@ const items: ItemDataType[] = [
   {
     id: 71,
     name: "白色掠夺者兜帽",
-    sourceName: "white_raider_hood.png",
+    sourceName: "white_raider_hood.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Agility],
@@ -673,7 +673,7 @@ const items: ItemDataType[] = [
   {
     id: 72,
     name: "白色消亡者",
-    sourceName: "white_vanquisher.png",
+    sourceName: "white_vanquisher.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Forest],
     characterStat: [CharacterStatType.Agility],
@@ -684,7 +684,7 @@ const items: ItemDataType[] = [
   {
     id: 73,
     name: "大天使雕像",
-    sourceName: "archangel_statue.png",
+    sourceName: "archangel_statue.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Knowledge],
@@ -693,7 +693,7 @@ const items: ItemDataType[] = [
   {
     id: 74,
     name: "巨灵头盔",
-    sourceName: "djinn_helmet.png",
+    sourceName: "djinn_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Knowledge],
@@ -702,7 +702,7 @@ const items: ItemDataType[] = [
   {
     id: 75,
     name: "巨灵肩甲",
-    sourceName: "djinn_shoulder_armor.png",
+    sourceName: "djinn_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Knowledge],
@@ -711,7 +711,7 @@ const items: ItemDataType[] = [
   {
     id: 76,
     name: "冰霜护甲",
-    sourceName: "frost_armor.png",
+    sourceName: "frost_armor.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Stamina],
@@ -720,7 +720,7 @@ const items: ItemDataType[] = [
   {
     id: 77,
     name: "冰霜之歌",
-    sourceName: "frost_song.png",
+    sourceName: "frost_song.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Intelligence],
@@ -729,7 +729,7 @@ const items: ItemDataType[] = [
   {
     id: 78,
     name: "冰川冠冕",
-    sourceName: "glacier_crown.png",
+    sourceName: "glacier_crown.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Intelligence],
@@ -738,7 +738,7 @@ const items: ItemDataType[] = [
   {
     id: 79,
     name: "冰川肩甲",
-    sourceName: "glacier_shoulder_armor.png",
+    sourceName: "glacier_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Intelligence],
@@ -747,7 +747,7 @@ const items: ItemDataType[] = [
   {
     id: 80,
     name: "神圣护符",
-    sourceName: "holy_amulet.png",
+    sourceName: "holy_amulet.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Knowledge],
@@ -756,7 +756,7 @@ const items: ItemDataType[] = [
   {
     id: 81,
     name: "神圣水晶",
-    sourceName: "holy_crystal.png",
+    sourceName: "holy_crystal.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Stamina],
@@ -765,7 +765,7 @@ const items: ItemDataType[] = [
   {
     id: 82,
     name: "神圣法杖",
-    sourceName: "holy_staff.png",
+    sourceName: "holy_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Knowledge],
@@ -774,7 +774,7 @@ const items: ItemDataType[] = [
   {
     id: 83,
     name: "月神箭袋",
-    sourceName: "lunar_arrow_quiver.png",
+    sourceName: "lunar_arrow_quiver.webp",
     itemType: [ItemType.Quiver],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Agility],
@@ -783,7 +783,7 @@ const items: ItemDataType[] = [
   {
     id: 84,
     name: "魔法宝珠",
-    sourceName: "magic_orb.png",
+    sourceName: "magic_orb.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Intelligence],
@@ -792,7 +792,7 @@ const items: ItemDataType[] = [
   {
     id: 85,
     name: "救世主",
-    sourceName: "savior_shield.png",
+    sourceName: "savior_shield.webp",
     itemType: [ItemType.Shield],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Stamina],
@@ -801,7 +801,7 @@ const items: ItemDataType[] = [
   {
     id: 86,
     name: "稻草人",
-    sourceName: "scarecrow_banner.png",
+    sourceName: "scarecrow_banner.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Glacier],
     characterStat: [CharacterStatType.Knowledge],
@@ -812,7 +812,7 @@ const items: ItemDataType[] = [
   {
     id: 87,
     name: "希望之旗",
-    sourceName: "banner_of_hope.png",
+    sourceName: "banner_of_hope.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Knowledge],
@@ -821,7 +821,7 @@ const items: ItemDataType[] = [
   {
     id: 88,
     name: "赐福",
-    sourceName: "blessing_staff.png",
+    sourceName: "blessing_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Knowledge],
@@ -830,7 +830,7 @@ const items: ItemDataType[] = [
   {
     id: 89,
     name: "血腥戒指",
-    sourceName: "bloody_ring.png",
+    sourceName: "bloody_ring.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Strength],
@@ -839,7 +839,7 @@ const items: ItemDataType[] = [
   {
     id: 90,
     name: "壁垒盾",
-    sourceName: "bulwark_shield.png",
+    sourceName: "bulwark_shield.webp",
     itemType: [ItemType.Shield],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Stamina],
@@ -848,7 +848,7 @@ const items: ItemDataType[] = [
   {
     id: 91,
     name: "诅咒挂件",
-    sourceName: "cursed_pendant.png",
+    sourceName: "cursed_pendant.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Intelligence],
@@ -857,7 +857,7 @@ const items: ItemDataType[] = [
   {
     id: 92,
     name: "命运之骰",
-    sourceName: "dice_of_fate.png",
+    sourceName: "dice_of_fate.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Agility],
@@ -866,7 +866,7 @@ const items: ItemDataType[] = [
   {
     id: 93,
     name: "狂怒头盔",
-    sourceName: "fury_helmet.png",
+    sourceName: "fury_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Knowledge],
@@ -875,7 +875,7 @@ const items: ItemDataType[] = [
   {
     id: 94,
     name: "黄金骑士头盔",
-    sourceName: "golden_knight_helmet.png",
+    sourceName: "golden_knight_helmet.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Stamina],
@@ -884,7 +884,7 @@ const items: ItemDataType[] = [
   {
     id: 95,
     name: "黄金肩甲",
-    sourceName: "golden_shoulder_armor.png",
+    sourceName: "golden_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Stamina],
@@ -893,16 +893,16 @@ const items: ItemDataType[] = [
   {
     id: 96,
     name: "黄金矛",
-    sourceName: "golden_spear.png",
+    sourceName: "golden_spear.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Strength],
-    professionType: [ProfessionType.Warrior],
+    professionType: [ProfessionType.Knight],
   },
   {
     id: 97,
     name: "钢铁之心",
-    sourceName: "heart_of_steel.png",
+    sourceName: "heart_of_steel.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Stamina],
@@ -911,7 +911,7 @@ const items: ItemDataType[] = [
   {
     id: 98,
     name: "铁钉头槌",
-    sourceName: "iron_nail_mace.png",
+    sourceName: "iron_nail_mace.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Stamina],
@@ -920,7 +920,7 @@ const items: ItemDataType[] = [
   {
     id: 99,
     name: "振奋之旗",
-    sourceName: "rallying_banner.png",
+    sourceName: "rallying_banner.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Knowledge],
@@ -929,7 +929,7 @@ const items: ItemDataType[] = [
   {
     id: 100,
     name: "圣洁王冠",
-    sourceName: "sanctified_crown.png",
+    sourceName: "sanctified_crown.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Knowledge],
@@ -938,7 +938,7 @@ const items: ItemDataType[] = [
   {
     id: 101,
     name: "圣洁肩甲",
-    sourceName: "sanctified_shoulder_armor.png",
+    sourceName: "sanctified_shoulder_armor.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Knowledge],
@@ -947,7 +947,7 @@ const items: ItemDataType[] = [
   {
     id: 102,
     name: "荆棘之甲",
-    sourceName: "thorns_armor.png",
+    sourceName: "thorns_armor.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Stamina],
@@ -956,7 +956,7 @@ const items: ItemDataType[] = [
   {
     id: 103,
     name: "战旗",
-    sourceName: "war_banner.png",
+    sourceName: "war_banner.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Knowledge],
@@ -965,7 +965,7 @@ const items: ItemDataType[] = [
   {
     id: 104,
     name: "战锤",
-    sourceName: "war_hammer.png",
+    sourceName: "war_hammer.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Mountain],
     characterStat: [CharacterStatType.Strength],
@@ -976,7 +976,7 @@ const items: ItemDataType[] = [
   {
     id: 105,
     name: "远古之杖",
-    sourceName: "ancient_staff.png",
+    sourceName: "ancient_staff.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Knowledge],
@@ -985,7 +985,7 @@ const items: ItemDataType[] = [
   {
     id: 106,
     name: "甲虫胸针",
-    sourceName: "beetle_brooch.png",
+    sourceName: "beetle_brooch.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Knowledge],
@@ -994,7 +994,7 @@ const items: ItemDataType[] = [
   {
     id: 107,
     name: "电之杖",
-    sourceName: "lightning_staff.png",
+    sourceName: "lightning_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Intelligence],
@@ -1003,7 +1003,7 @@ const items: ItemDataType[] = [
   // {
   //   id: 108,
   //   name: "月神弓",
-  //   sourceName: "lunar_bow.png",
+  //   sourceName: "lunar_bow.webp",
   //   itemType: [ItemType.Weapon],
   //   biomeType: [BiomeType.Ruin],
   //   characterStat: [CharacterStatType.Stamina],
@@ -1012,16 +1012,16 @@ const items: ItemDataType[] = [
   {
     id: 109,
     name: "月神兜帽",
-    sourceName: "lunar_hood.png",
+    sourceName: "lunar_hood.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Ruin],
-    characterStat: [CharacterStatType.Agility],
-    professionType: [ProfessionType.Rogue, ProfessionType.Archer],
+    characterStat: [CharacterStatType.Intelligence],
+    professionType: [ProfessionType.Archer],
   },
   {
     id: 110,
     name: "法力操纵器",
-    sourceName: "mana_manipulator.png",
+    sourceName: "mana_manipulator.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Intelligence],
@@ -1030,7 +1030,7 @@ const items: ItemDataType[] = [
   // {
   //   id: 111,
   //   name: "暗夜兜帽",
-  //   sourceName: "night_hood.png",
+  //   sourceName: "night_hood.webp",
   //   itemType: [ItemType.Helmet],
   //   biomeType: [BiomeType.Ruin],
   //   characterStat: [CharacterStatType.Intelligence],
@@ -1039,7 +1039,7 @@ const items: ItemDataType[] = [
   // {
   //   id: 112,
   //   name: "暗夜护肩",
-  //   sourceName: "night_shoulder_pads.png",
+  //   sourceName: "night_shoulder_pads.webp",
   //   itemType: [ItemType.ShoulderArmor],
   //   biomeType: [BiomeType.Ruin],
   //   characterStat: [CharacterStatType.Intelligence],
@@ -1048,7 +1048,7 @@ const items: ItemDataType[] = [
   {
     id: 113,
     name: "日曜箭袋",
-    sourceName: "solar_arrow_quiver.png",
+    sourceName: "solar_arrow_quiver.webp",
     itemType: [ItemType.Quiver],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Agility],
@@ -1057,7 +1057,7 @@ const items: ItemDataType[] = [
   {
     id: 114,
     name: "风暴之铸",
-    sourceName: "storm_forge.png",
+    sourceName: "storm_forge.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Intelligence],
@@ -1066,7 +1066,7 @@ const items: ItemDataType[] = [
   {
     id: 115,
     name: "风暴兜帽",
-    sourceName: "storm_hood.png",
+    sourceName: "storm_hood.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Intelligence],
@@ -1075,7 +1075,7 @@ const items: ItemDataType[] = [
   {
     id: 116,
     name: "风暴护肩",
-    sourceName: "storm_shoulder_pads.png",
+    sourceName: "storm_shoulder_pads.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Intelligence],
@@ -1084,7 +1084,7 @@ const items: ItemDataType[] = [
   {
     id: 117,
     name: "特斯拉线圈",
-    sourceName: "tesla_coil.png",
+    sourceName: "tesla_coil.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Agility],
@@ -1093,7 +1093,7 @@ const items: ItemDataType[] = [
   {
     id: 118,
     name: "雷霆戒指",
-    sourceName: "thunder_ring.png",
+    sourceName: "thunder_ring.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Ruin],
     characterStat: [CharacterStatType.Stamina],
@@ -1102,7 +1102,7 @@ const items: ItemDataType[] = [
   {
     id: 119,
     name: "血项链",
-    sourceName: "Blood_Necklace.png",
+    sourceName: "Blood_Necklace.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Stamina, CharacterStatType.Strength],
@@ -1111,7 +1111,7 @@ const items: ItemDataType[] = [
   {
     id: 120,
     name: "新月钺刃",
-    sourceName: "Crescent_Axe_Blade.png",
+    sourceName: "Crescent_Axe_Blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1121,7 +1121,7 @@ const items: ItemDataType[] = [
   {
     id: 121,
     name: "新月眼罩",
-    sourceName: "Crescent_Eyepatch.png",
+    sourceName: "Crescent_Eyepatch.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1131,7 +1131,7 @@ const items: ItemDataType[] = [
   {
     id: 122,
     name: "新月护肩",
-    sourceName: "Crescent_Pauldrons.png",
+    sourceName: "Crescent_Pauldrons.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1141,7 +1141,7 @@ const items: ItemDataType[] = [
   {
     id: 123,
     name: "处决者面具",
-    sourceName: "Executioner_Mask.png",
+    sourceName: "Executioner_Mask.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1151,7 +1151,7 @@ const items: ItemDataType[] = [
   {
     id: 124,
     name: "处决者护肩",
-    sourceName: "Executioner_Pauldrons.png",
+    sourceName: "Executioner_Pauldrons.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1161,7 +1161,7 @@ const items: ItemDataType[] = [
   {
     id: 125,
     name: "冰川钺刃",
-    sourceName: "Glacier_Axe_Blade.png",
+    sourceName: "Glacier_Axe_Blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1171,7 +1171,7 @@ const items: ItemDataType[] = [
   {
     id: 126,
     name: "成长药水",
-    sourceName: "Growth_Potion.png",
+    sourceName: "Growth_Potion.webp",
     itemType: [ItemType.Potions],
     biomeType: [BiomeType.Raid, BiomeType.Store],
     characterStat: [CharacterStatType.Stamina,CharacterStatType.Strength,CharacterStatType.Knowledge,CharacterStatType.Intelligence,CharacterStatType.Agility],
@@ -1180,7 +1180,7 @@ const items: ItemDataType[] = [
   {
     id: 127,
     name: "行军口粮",
-    sourceName: "March_Rations.png",
+    sourceName: "March_Rations.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1190,7 +1190,7 @@ const items: ItemDataType[] = [
   {
     id: 128,
     name: "毒蛇之帽",
-    sourceName: "Viper_Hood.png",
+    sourceName: "Viper_Hood.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
@@ -1200,8 +1200,8 @@ const items: ItemDataType[] = [
   {
     id: 129,
     name: "毒蛇之袍",
-    sourceName: "Viper_Robe.png",
-    itemType: [ItemType.Helmet],
+    sourceName: "Viper_Robe.webp",
+    itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
     professionType: [ProfessionType.Mage],
@@ -1210,7 +1210,7 @@ const items: ItemDataType[] = [
   {
     id: 130,
     name: "蜘蛛偶像（下半部分）",
-    sourceName: "Spider_Idol_Lower_Half.png",
+    sourceName: "Spider_Idol_Lower_Half.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Knowledge,CharacterStatType.Stamina],
@@ -1219,7 +1219,7 @@ const items: ItemDataType[] = [
   {
     id: 131,
     name: "星辰碎片",
-    sourceName: "Star_Shard.png",
+    sourceName: "Star_Shard.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1229,7 +1229,7 @@ const items: ItemDataType[] = [
   {
     id: 132,
     name: "风暴碎片",
-    sourceName: "Storm_Shard.png",
+    sourceName: "Storm_Shard.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1239,7 +1239,7 @@ const items: ItemDataType[] = [
   {
     id: 133,
     name: "风暴剑刃",
-    sourceName: "Storm_Blade.png",
+    sourceName: "Storm_Blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1249,7 +1249,7 @@ const items: ItemDataType[] = [
   {
     id: 134,
     name: "巨魔牙项链（洞穴）",
-    sourceName: "Troll_Fang_Necklace_Cave.png",
+    sourceName: "Troll_Fang_Necklace_Cave.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Stamina, CharacterStatType.Agility],
@@ -1258,7 +1258,7 @@ const items: ItemDataType[] = [
   {
     id: 135,
     name: "巨魔牙项链（废墟）",
-    sourceName: "Troll_Fang_Necklace_Ruins.png",
+    sourceName: "Troll_Fang_Necklace_Ruins.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Stamina, CharacterStatType.Intelligence],
@@ -1266,7 +1266,7 @@ const items: ItemDataType[] = [
   },
 ];
 
-const modules = import.meta.glob('../images/*/*.{png,jpg,jpeg,svg}', { as: 'url' });
+const modules = import.meta.glob('../images/*/*.webp', { as: 'url' });
 
 async function getImageUrl(name: string, fileName: "icons" | "details" | "biomes") {
   const preUrl = `../images/${fileName}/${name}`;

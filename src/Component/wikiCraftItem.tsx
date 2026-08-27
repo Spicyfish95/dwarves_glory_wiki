@@ -2,7 +2,7 @@ import "./WikiCraftItem.css"
 import { useEffect, useMemo, useState } from "react";
 import { Card, Popover, Image, Spin } from "antd";
 import type { ItemModuleType } from "../assets/datas/Types";
-import errorImag from "../assets/images/error.png"
+import errorImag from "../assets/images/error.webp"
 
 interface IProps {
     item?: ItemModuleType,

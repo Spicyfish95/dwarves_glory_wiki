@@ -2,7 +2,7 @@ import './WikiItem.css'
 import { useEffect, useMemo, useState } from "react";
 import { Card, Empty, Popover, Image, Tooltip, Spin } from "antd";
 import { BiomeType, type BiomeIconType, type ItemModuleType } from "../assets/datas/Types";
-import errorImag from "../assets/images/error.png"
+import errorImag from "../assets/images/error.webp"
 import { itemDataMap } from '../assets/datas/ItemDatas';
 import WikiCraftItem from './wikiCraftItem';
 
