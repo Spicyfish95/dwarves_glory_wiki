@@ -400,7 +400,7 @@ const items: ItemDataType[] = [
   {
     id: 42,
     name: "蛇杖",
-    sourceName: "serpent_staff.webp",
+    sourceName: "snake_staff.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Chief, BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
@@ -1000,15 +1000,6 @@ const items: ItemDataType[] = [
     characterStat: [CharacterStatType.Intelligence],
     professionType: [ProfessionType.Mage],
   },
-  // {
-  //   id: 108,
-  //   name: "月神弓",
-  //   sourceName: "lunar_bow.webp",
-  //   itemType: [ItemType.Weapon],
-  //   biomeType: [BiomeType.Ruin],
-  //   characterStat: [CharacterStatType.Stamina],
-  //   professionType: [ProfessionType.Knight],
-  // },
   {
     id: 109,
     name: "月神兜帽",
@@ -1027,24 +1018,6 @@ const items: ItemDataType[] = [
     characterStat: [CharacterStatType.Intelligence],
     professionType: [ProfessionType.Mage],
   },
-  // {
-  //   id: 111,
-  //   name: "暗夜兜帽",
-  //   sourceName: "night_hood.webp",
-  //   itemType: [ItemType.Helmet],
-  //   biomeType: [BiomeType.Ruin],
-  //   characterStat: [CharacterStatType.Intelligence],
-  //   professionType: [ProfessionType.Mage],
-  // },
-  // {
-  //   id: 112,
-  //   name: "暗夜护肩",
-  //   sourceName: "night_shoulder_pads.webp",
-  //   itemType: [ItemType.ShoulderArmor],
-  //   biomeType: [BiomeType.Ruin],
-  //   characterStat: [CharacterStatType.Intelligence],
-  //   professionType: [ProfessionType.Mage],
-  // },
   {
     id: 113,
     name: "日曜箭袋",
@@ -1102,7 +1075,7 @@ const items: ItemDataType[] = [
   {
     id: 119,
     name: "血项链",
-    sourceName: "Blood_Necklace.webp",
+    sourceName: "blood_necklace.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Stamina, CharacterStatType.Strength],
@@ -1111,7 +1084,7 @@ const items: ItemDataType[] = [
   {
     id: 120,
     name: "新月钺刃",
-    sourceName: "Crescent_Axe_Blade.webp",
+    sourceName: "crescent_axe_blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1121,7 +1094,7 @@ const items: ItemDataType[] = [
   {
     id: 121,
     name: "新月眼罩",
-    sourceName: "Crescent_Eyepatch.webp",
+    sourceName: "crescent_eyepatch.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1131,7 +1104,7 @@ const items: ItemDataType[] = [
   {
     id: 122,
     name: "新月护肩",
-    sourceName: "Crescent_Pauldrons.webp",
+    sourceName: "crescent_pauldrons.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1141,7 +1114,7 @@ const items: ItemDataType[] = [
   {
     id: 123,
     name: "处决者面具",
-    sourceName: "Executioner_Mask.webp",
+    sourceName: "executioner_mask.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1151,7 +1124,7 @@ const items: ItemDataType[] = [
   {
     id: 124,
     name: "处决者护肩",
-    sourceName: "Executioner_Pauldrons.webp",
+    sourceName: "executioner_pauldrons.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1161,7 +1134,7 @@ const items: ItemDataType[] = [
   {
     id: 125,
     name: "冰川钺刃",
-    sourceName: "Glacier_Axe_Blade.webp",
+    sourceName: "glacier_axe_blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1171,7 +1144,16 @@ const items: ItemDataType[] = [
   {
     id: 126,
     name: "成长药水",
-    sourceName: "Growth_Potion.webp",
+    sourceName: "growth_potion.webp",
+    itemType: [ItemType.Potions],
+    biomeType: [BiomeType.Raid, BiomeType.Store],
+    characterStat: [CharacterStatType.Stamina,CharacterStatType.Strength,CharacterStatType.Knowledge,CharacterStatType.Intelligence,CharacterStatType.Agility],
+    professionType: [ProfessionType.Warrior,ProfessionType.Rogue,ProfessionType.Archer,ProfessionType.Mage,ProfessionType.Shaman,ProfessionType.Priest,ProfessionType.Knight],
+  },
+  {
+    id: 108,
+    name: "特质药水",
+    sourceName: "trait_potion.webp",
     itemType: [ItemType.Potions],
     biomeType: [BiomeType.Raid, BiomeType.Store],
     characterStat: [CharacterStatType.Stamina,CharacterStatType.Strength,CharacterStatType.Knowledge,CharacterStatType.Intelligence,CharacterStatType.Agility],
@@ -1180,7 +1162,7 @@ const items: ItemDataType[] = [
   {
     id: 127,
     name: "行军口粮",
-    sourceName: "March_Rations.webp",
+    sourceName: "march_rations.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1190,7 +1172,7 @@ const items: ItemDataType[] = [
   {
     id: 128,
     name: "毒蛇之帽",
-    sourceName: "Viper_Hood.webp",
+    sourceName: "viper_hood.webp",
     itemType: [ItemType.Helmet],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
@@ -1200,7 +1182,7 @@ const items: ItemDataType[] = [
   {
     id: 129,
     name: "毒蛇之袍",
-    sourceName: "Viper_Robe.webp",
+    sourceName: "viper_robe.webp",
     itemType: [ItemType.ShoulderArmor],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Intelligence],
@@ -1210,7 +1192,7 @@ const items: ItemDataType[] = [
   {
     id: 130,
     name: "蜘蛛偶像（下半部分）",
-    sourceName: "Spider_Idol_Lower_Half.webp",
+    sourceName: "spider_idol_lower_half.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Knowledge,CharacterStatType.Stamina],
@@ -1219,7 +1201,7 @@ const items: ItemDataType[] = [
   {
     id: 131,
     name: "星辰碎片",
-    sourceName: "Star_Shard.webp",
+    sourceName: "star_shard.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1229,7 +1211,7 @@ const items: ItemDataType[] = [
   {
     id: 132,
     name: "风暴碎片",
-    sourceName: "Storm_Shard.webp",
+    sourceName: "storm_shard.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Agility],
@@ -1239,7 +1221,7 @@ const items: ItemDataType[] = [
   {
     id: 133,
     name: "风暴剑刃",
-    sourceName: "Storm_Blade.webp",
+    sourceName: "storm_blade.webp",
     itemType: [ItemType.Weapon],
     biomeType: [BiomeType.Craft],
     characterStat: [CharacterStatType.Strength],
@@ -1249,7 +1231,7 @@ const items: ItemDataType[] = [
   {
     id: 134,
     name: "巨魔牙项链（洞穴）",
-    sourceName: "Troll_Fang_Necklace_Cave.webp",
+    sourceName: "troll_fang_necklace_cave.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Stamina, CharacterStatType.Agility],
@@ -1258,7 +1240,7 @@ const items: ItemDataType[] = [
   {
     id: 135,
     name: "巨魔牙项链（废墟）",
-    sourceName: "Troll_Fang_Necklace_Ruins.webp",
+    sourceName: "troll_fang_necklace_ruins.webp",
     itemType: [ItemType.Artifact],
     biomeType: [BiomeType.Raid],
     characterStat: [CharacterStatType.Stamina, CharacterStatType.Intelligence],
